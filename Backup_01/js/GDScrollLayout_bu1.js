@@ -236,7 +236,7 @@
       h3.css ({"lineHeight": "100%", "fontSize":"1.4em"});
 
       for (var i = 0; i < aR2Images.length; i++) {
-        fAnimateHeightWidth (aR2Images, smallHeight, 500); //rowImgRightColmnWidth);
+        fAnimateHeightWidth (aR2Images[i], smallHeight, 500); //rowImgRightColmnWidth);
       }
       /**----( Compress the left columns )----**/
       for(var i = 0; i < aLeftColumns.length; i++){
@@ -270,7 +270,7 @@
 
       /**----( aR2Images: HBCBS images array collection )----**/
       for (var i = 0; i < aR2Images.length; i++) {
-        fAnimateHeightWidth (aR2Images, mediumHeight, 500);//rowImgRightColmnWidth);
+        fAnimateHeightWidth (aR2Images[i], mediumHeight, 500);//rowImgRightColmnWidth);
       }
 
       /**----( Default left columns width )----**/

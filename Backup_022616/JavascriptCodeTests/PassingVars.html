@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html >
+<head lang = "en" >
+  <meta charset = "UTF-8" >
+
+  <title >JavaScript Code Tests Page</title >
+
+  <script >
+
+    /** passing variables from one function to another **/
+    function func1 () {
+      var msg    = "Here I am";
+      var newMsg = func2 (msg);
+      console.log ("newMsg: ",newMsg);
+      /* will print out "Here I am And Now Where are You?" in an alert box */
+    }
+    function func2 (msg) {
+      return msg + " And Now Where are You?";
+    }
+    func1 ();
+    /***************************** • *****************************/
+    function function1 () {
+      var variable1 = 12;
+      //passing variable from this function to function2
+      function2 (variable1);
+      //console.log ("variable1: ",variable1);
+    }
+
+    function function2 (val) {
+      var variableOfFunction1 = val;
+      console.log ("variableOfFunction1: ",variableOfFunction1);
+    }
+    function1 ();
+    //function2 (20)
+
+    /**-----===( Passing var value from one function to another )===-----**/
+    function A () {
+      var num1 = 1;
+      var num2 = 10;
+      B (num1, num2);
+      console.log ("rand_num: ", num1, " ", num2)
+    }
+
+    function B (min, max) {
+      getRandomArbitrary (min, max);
+    }
+
+    function calcRandNum (num) {
+      //return Math.random(num);
+    }
+
+    // Returns a random number between min (inclusive) and max (exclusive)
+    function getRandomArbitrary (min, max) {
+      return Math.random () * (max - min) + min;
+    }
+
+    A ();
+
+  </script >
+
+  <meta name = "viewport" content = "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" >
+  <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" >
+  <link href = "http://fonts.googleapis.com/css?family=Ubuntu+Condensed|Open+Sans:400,300|Raleway|Cinzel" rel = "stylesheet" type = "text/css" >
+
+  <!--==========| INLINE STYLE |==========-->
+  <style >
+    h1 {
+      font-family: "Ubuntu", sans-serif;
+    }
+
+    p {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 300;
+      font-size: medium;
+      margin-top: 10px;
+    }
+
+    .container-fluid {
+      height: auto;
+      margin: 20px 20px 10px 20px;
+      padding-bottom: 100px;
+      background-color: #cccccc;
+      border: solid 1px #444444;
+      border-radius: 10px;
+    }
+
+    img {
+      width: 100%;
+    }
+  </style >
+</head >
+<!--==========| BODY START |==========-->
+<body >
+
+<div class = "container-fluid" >
+  <div class = "row" >
+    <div class = "col-sm-12" >
+      <h1 >JavaScript Code Tests</h1 >
+    </div >
+  </div >
+</div >
+
+<!--==========| JAVASCRIPTS |==========-->
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" ></script >
+<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" ></script >
+<script src = "http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" ></script >
+<!--<script src = "JavascriptFileName.js" ></script >-->
+</body >
+<!--==========| BODY END |==========-->
+</html >

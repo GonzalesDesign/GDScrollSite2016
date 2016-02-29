@@ -325,7 +325,7 @@
   var resizedViewport = false;
 
   function fNextPreviousButtons (rightArrowId, leftArrowId, aImages, sectionImgsContainerId) { //Assign a value to parameter counter on each container
-    //console.log ("fNextPreviousButtons:----------• ", sectionImgsContainerId);
+    console.log ("fNextPreviousButtons:----------• ", "sectionImgsContainerId");
     //fResetNum(resetNum);
     /*xx = fResetNum();
      fTest(0);

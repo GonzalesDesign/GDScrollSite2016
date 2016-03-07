@@ -266,8 +266,6 @@ p {
   /*old name: .ulRowImg1*/
   float: left;
   width: 1500px;
-  left: 0px;
-  position: relative;
   /*margin-left: -15px;*/
   height: 500px;
   /*display: inline-block;*/
@@ -389,8 +387,6 @@ p {
   /*old name: .ulRowImg1*/
   float: left;
   width: 1500px;
-  left: 0px;
-  position: relative;
   /*margin-left: -15px;*/
   /*height: 500px;*/
   /*display: inline-block;*/

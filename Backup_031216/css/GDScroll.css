@@ -374,7 +374,6 @@ p {
 
 .colRightCrop3 {
   /*old name: rowImg1*/
-  width: 100px;
   overflow: hidden;
   /*overflow: scroll;*/
   margin: 0px;

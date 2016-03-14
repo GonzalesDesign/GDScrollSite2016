@@ -644,9 +644,6 @@
     this.RightColPercntage = rightColPercntage;
     this.ImgArry           = imgArry;
 
-    /*var colRight3 = $ (".colRight3");
-    var colRightWidth3 = colRight3.width ();*/
-
     this.imgSectConfig = function () {
 
       /**----( Two columns )----**/
@@ -665,13 +662,13 @@
       //colRightCrop3Width = colRightWidth3;
 
       /**----( Adjust left columns div width )----**/
-      colLeft3.css ({"width": "500px"}); //columnLeft
-      //fAnimateWidth (colLeft3, columnLeft);
+      //colLeft3.css ({"width": "500px"}); //columnLeft
+      fAnimateWidth (colLeft3, columnLeft);
       //console.log ("colLeft3: ", colLeft3);
       /**----( Adjust the right columns div width )----**/
-      colRight3.css ({"width": colRightWidth3});
-      //fAnimateWidth (colRight3, colRightWidth3);
-      //colRightCrop3.css ({"width": colRightWidth3}); //colRightWidth3
+      //colRight3.css ({"width": "500px"}); //colRightWidth3
+      fAnimateWidth (colRight3, colRightWidth3);
+      colRightCrop3.css ({"width": colRightWidth3}); //colRightWidth3
       //fAnimateWidth (colRightCrop3Width, colRightWidth3);
       //colRight3.css ({"border": "0px solid black"}); //for debugging
 

@@ -3,12 +3,6 @@
   *
   */
 
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 html, body {
   font-family: "Lato", sans-serif;
   /*font-weight: 200;*/
@@ -245,9 +239,6 @@ p {
 }
 
 .rowImages {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   border: 0px solid #4eff06;
 }
 
@@ -269,10 +260,6 @@ p {
   height: 20px;
   background-color: lightgrey;
   border: 0px solid #d3e80b;
-}
-.colRight3 {
-  padding-left: 0px;
-  border: 0px solid #8b9606;
 }
 
 .rowHeaderRightColmn {
@@ -372,16 +359,6 @@ p {
   border: 1px solid #ffb90a;
 }
 
-.colRightCrop3 {
-  /*old name: rowImg1*/
-  width: 100px;
-  overflow: hidden;
-  /*overflow: scroll;*/
-  margin: 0px;
-  padding: 0px;
-  /*background-color: #024f86;*/
-  border: 6px solid #f82a11;
-}
 /**--- Horizon Images ---**/
 #horizonImagesChamberId {
   /*old name: .ulRowImg1*/
@@ -608,7 +585,6 @@ p {
   /*margin-left: -15px;*/
   /*height: 500px;*/
   /*display: inline-block;*/
-  opacity: .25;
   background-color: #31708f;
   border: 0px solid #97996f;
 }

@@ -8,7 +8,6 @@
   console.log ("•-----=====( GDScrollLayout.js )=====-----•");
 
   /**=====================| VARIABLES |=====================**/
-
   /**-----------=====| TweenMax Variables |=====-----------**/
   var tMx       = TweenMax;
   var easeSine  = Sine.easeOut;
@@ -25,51 +24,50 @@
   //console.log ("windowInnerWidth: init ", windowInnerWidth);
 
   /**-----------=====| Bootstrap Container Inner Width |=====-----------**/
-  var container = $ (".container");
+  //var container = $ (".container");
   //console.log ("containerWidth: ", container.width () + 30);
 
   /**-----------=====| Browser Window Dimensions Variables |=====-----------**/
   var winWidth; //Window width
   var winHeight = $ (window).height ();
-  //winHeight = winHeight-32;
-  ////console.log ("winWidth: " + winWidth);
-  //console.log ("winHeight: " + winHeight);
 
   /**-----------=====| Devices Viewport Width |=====-----------**/
   var largeDevices  = 1200;
   var mediumDevices = 992;
   var smallDevices  = 640; //768;
 
-  /**-----------=====| Poster Area |=====-----------**/
-  var aPosterImages = ["intro_02", "intro_03", "intro_04"]; //"intro_00", "intro_01",
-  var r1PosterArea    = $ ("#r1PosterArea");
-  /** posterWinHeight variable
+  /*
+   /!**-----------=====| Poster Area |=====-----------**!/
+   var aPosterImages = ["intro_02", "intro_03", "intro_04"]; //"intro_00", "intro_01",
+   var r1PosterArea    = $ ("#r1PosterArea");
+   /!** posterWinHeight variable
    * When use for testing, divide the winHeight by any number to
    * decrease the poster height.
    * For production, just take off the divider.
-   ***************************************************************/
-  var posterWinHeight = winHeight / 2;
-  /********************************~********************************/
-  r1PosterArea.css ({"height": posterWinHeight}); //Fills the whole viewport on load.
-  //r1PosterArea.css ({"background": "url('./images/postersIntro/intro_04.jpg') no-repeat;"});
-  /** Load poster image randomly **/
-  var randImg  = aPosterImages[Math.floor (aPosterImages.length * Math.random ())];
-  var imageURL = "./images/postersIntro/" + randImg + ".jpg";
-  $ ("#r1PosterArea").css ('background-image', 'url(' + imageURL + ')');
-  //document.getElementById("r1PosterArea").style.backgroundImage =  "url('./images/postersIntro/intro_04.jpg')";
+   ***************************************************************!/
+   var posterWinHeight = winHeight / 2;
+   /!********************************~********************************!/
+   r1PosterArea.css ({"height": posterWinHeight}); //Fills the whole viewport on load.
+   //r1PosterArea.css ({"background": "url('./images/postersIntro/intro_04.jpg') no-repeat;"});
+   /!** Load poster image randomly **!/
+   var randImg  = aPosterImages[Math.floor (aPosterImages.length * Math.random ())];
+   var imageURL = "./images/postersIntro/" + randImg + ".jpg";
+   $ ("#r1PosterArea").css ('background-image', 'url(' + imageURL + ')');
+   //document.getElementById("r1PosterArea").style.backgroundImage =  "url('./images/postersIntro/intro_04.jpg')";
 
+   */
   var colRightCrop = $ (".colRightCrop"); //Column right cropper. Hidden overflow
   var colRightCropWidth = colRightCrop.width ();
 
-  function fLogoContainer () {
-    var logoContainer       = $ (".logoContainer");
-    var logoContainerHeight = logoContainer.height ();
-    var heightPercentage    = posterWinHeight * .05;
-    //console.log ("winHeight: ", winHeight);
-    //console.log ("heightPercentage: ", heightPercentage);
-    //logoContainer.css ({"top": (winHeight + (logoContainerHeight - 300))});
-    logoContainer.css ({"marginTop": posterWinHeight - (logoContainerHeight + heightPercentage)});
-  }
+  /*function fLogoContainer () {
+   var logoContainer       = $ (".logoContainer");
+   var logoContainerHeight = logoContainer.height ();
+   var heightPercentage    = posterWinHeight * .05;
+   //console.log ("winHeight: ", winHeight);
+   //console.log ("heightPercentage: ", heightPercentage);
+   //logoContainer.css ({"top": (winHeight + (logoContainerHeight - 300))});
+   logoContainer.css ({"marginTop": posterWinHeight - (logoContainerHeight + heightPercentage)});
+   }*/
 
   /**-----------=====| Horizon Images |=====-----------**/
   var horizonImagesChamberId = $ ("#horizonImagesChamberId");
@@ -184,15 +182,14 @@
   var colRightWidth = colRight.width ();
   //console.log ("colRightWidth: init: ", colRightWidth);
 
-  var colLeft3  = $ (".colLeft3"); //Class
-  var cL3  = $ ("#cL3"); //Id
+  var colLeft3 = $ (".colLeft3"); //Class
+  var cL3 = $ ("#cL3"); //Id
   //var colRight3 = $ (".colRight3")
   var colRight3 = $ (".colRight3")
-  var colRightWidth3 = colRight3.width ();
+  //var colRightWidth3 = colRight3.width ();
 
-  var colRightCrop3  = $ (".colRightCrop3");
+  var colRightCrop3      = $ (".colRightCrop3");
   var colRightCrop3Width = colRightCrop3.width ();
-
 
   /**-----------=====| Left columns configuration 2 |=====-----------**/
   var colLeft2       = $ (".colLeft2");
@@ -240,7 +237,7 @@
    ****************************************************************/
   function fAnimateHeight (elem, eHeight) {
     //tMx.to (elem, animTym, {css: {height: eHeight}, ease: easePower});
-    tMx.to (elem, animTym, {height: (eHeight+"px"), ease: easePower});
+    tMx.to (elem, animTym, {height: (eHeight + "px"), ease: easePower});
   }
 
   /**-----------=====| fAnimateLeftPosition Function |=====-----------**/
@@ -263,7 +260,7 @@
    ****************************************************************/
   function fAnimateHeightWidth (elem, eHeight, eWidth) {
     //tMx.to (elem, animTym, {css: {height: eHeight, width: eWidth}, ease: easePower});
-    tMx.to (elem, animTym, {height: (eHeight+"px"), width: eWidth, ease: easePower});
+    tMx.to (elem, animTym, {height: (eHeight + "px"), width: eWidth, ease: easePower});
   }
 
   /**-----------=====| fXSlider Function |=====-----------**/
@@ -292,7 +289,7 @@
   function fAnimateTop (elem, eTopPos) {
     //tMx.to (elem, animTym, {css: {top: eTopPos}, ease: easePower});
     //tMx.to (elem, animTym, {top: eTopPos, ease: easePower}); //Error!
-    tMx.to(elem, animTym, {top:(eTopPos+"px")});
+    tMx.to (elem, animTym, {top: (eTopPos + "px")});
     //elem.css ({"top": eTopPos}); //Works!
   };
 
@@ -314,14 +311,16 @@
      * padding-right: 15px
      * padding-left: 15px
      **********************************/
+    /**-----------=====| Bootstrap Container Inner Width |=====-----------**/
+    var container = $ (".container");
     var padLeftRight   = 30;
     var containerWidth = (container.width ()) + padLeftRight;
     /**-*****************************************************-**/
     var columnRight    = containerWidth * (rightColumnPercentage / 100); // (90 / 100) for 90%
-    var columnLeft            = containerWidth - columnRight;
+    var columnLeft = containerWidth - columnRight;
     //var imageRightColumnWidth = Math.round (columnRight);
-    colRightWidth             = Math.round (columnRight);
-    console.log("colRightWidth: ",colRightWidth);
+    colRightWidth = Math.round (columnRight);
+    console.log ("colRightWidth: ", colRightWidth);
     /**----( Adjust left columns width )----**/
     colLeft.css ({"width": columnLeft});
     /**----( Adjust the right columns )----**/
@@ -473,15 +472,15 @@
     var nextPos               = 0;
     var ii                    = 0;
     this.fNextPreviousButtons = function fNextPreviousButtons (rightArrow,
-                            leftArrow,
-                            aryImages,
-                            rightColumnPercentage,
-                            sectionChamber) {
+                                                               leftArrow,
+                                                               aryImages,
+                                                               rightColumnPercentage,
+                                                               sectionChamber) {
 
-      this.RightArrow       = rightArrow;
-      this.LeftArrow        = leftArrow;
+      this.RightArrow     = rightArrow;
+      this.LeftArrow      = leftArrow;
       this.SectionChamber = sectionChamber;
-      var me                = this;
+      var me              = this;
 
       this.RightArrow.click (function () {
         //rightArrow.click (function () { //works the same
@@ -497,21 +496,25 @@
 
         /** TO DO! **/
         /*var padLeftRight   = 30;
-        var containerWidth = (container.width ()) + padLeftRight;
-        var colRightWidth    = containerWidth * (rightColumnPercentage / 100);*/
+         var containerWidth = (container.width ()) + padLeftRight;
+         var colRightWidth    = containerWidth * (rightColumnPercentage / 100);*/
         /** For debugging **/
-        if(me.SectionChamber === ownImagesChamberId || me.SectionChamber === stax2ImagesChamberId){
-          nextPos = colRightWidth3 * ii;
+        if (me.SectionChamber === ownImagesChamberId) {
+          colRightWidth3 = ownColRightWidth3;
+          nextPos = ownColRightWidth3 * ii;
           /*/!**-----{ fXSlider: Slides the image container to the right }-----**!/
-          fXSlider (me.SectionChamber, -nextPos);
-          /!**-----{ sectionChamber }-----**!/
-          fContainerMultiplier (me.SectionChamber, ii);*/
+           fXSlider (me.SectionChamber, -nextPos);
+           /!**-----{ sectionChamber }-----**!/
+           fContainerMultiplier (me.SectionChamber, ii);*/
+        } else if (me.SectionChamber === stax2ImagesChamberId) {
+          colRightWidth3 = stax2ColRightWidth3;
+          nextPos = stax2ColRightWidth3 * ii;
         } else {
           nextPos = colRightWidth * ii;
           /*/!**-----{ fXSlider: Slides the image container to the right }-----**!/
-          fXSlider (me.SectionChamber, -nextPos);
-          /!**-----{ sectionChamber }-----**!/
-          fContainerMultiplier (me.SectionChamber, ii);*/
+           fXSlider (me.SectionChamber, -nextPos);
+           /!**-----{ sectionChamber }-----**!/
+           fContainerMultiplier (me.SectionChamber, ii);*/
         }
         /**-----{ fXSlider: Slides the image container to the right }-----**/
         fXSlider (me.SectionChamber, -nextPos);
@@ -566,7 +569,6 @@
   /**-----===( fHeightWidthPercentage Function )===-----**/
   var imgRowHeight;
 
-
   function fHeightWidthPercentage () {
     /**-----{ Percentage for height and width }-----**/
     var imgOrigWidth = 544; //Image original width
@@ -595,11 +597,6 @@
    *
    *
    * */
-  /*********************** TO DO: March 10, 2016 ***********************/
-  /** Image title placement
-   *  Use ImageSectionClass for all section's chambers
-   *  Optimize PreviousNextClass function
-   **************************************************************************/
 
   /**-----------=====| ImageSectionClass Class |=====-----------**/
   /** Description: Optimized function for the images container columns.
@@ -639,15 +636,18 @@
    *      fTitlePlacement: Sets the image title's height and the top position
    *
    *******************************************************************/
-  var ImageSectionClass = function ImageSectionClass (elem, rightColPercntage, imgArry) {
-    this.Elem              = elem;
-    this.RightColPercntage = rightColPercntage;
-    this.ImgArry           = imgArry;
-
+  var colRightWidth3;
+  var ImageSectionClass = function ImageSectionClass (elem, imgArry) {
+    this.Elem = elem;
+    //this.RightColPercntage = rightColPercntage;
+    this.ImgArry = imgArry;
+    /**-----------=====| Bootstrap Container Inner Width |=====-----------**/
+    var container = $ (".container");
     /*var colRight3 = $ (".colRight3");
-    var colRightWidth3 = colRight3.width ();*/
+     var colRightWidth3 = colRight3.width ();*/
+    //var colRightWidth3 = colRight3.width ();
 
-    this.imgSectConfig = function () {
+    this.imgSectConfig = function (rightColPercntage) {
 
       /**----( Two columns )----**/
       var padLeftRight   = 30;
@@ -664,16 +664,23 @@
       //colRightWidth             = Math.round (columnRight);
       //colRightCrop3Width = colRightWidth3;
 
-      /**----( Adjust left columns div width )----**/
+      //if(elem === elemCrop){
+
+        colLeft3.css ({"width": columnLeft});
+        colRight3.css ({"width": colRightWidth3});
+      //}
+
+      /*
+      /!**----( Adjust left columns div width )----**!/
       colLeft3.css ({"width": "500px"}); //columnLeft
       //fAnimateWidth (colLeft3, columnLeft);
       //console.log ("colLeft3: ", colLeft3);
-      /**----( Adjust the right columns div width )----**/
+      /!**----( Adjust the right columns div width )----**!/
       colRight3.css ({"width": colRightWidth3});
       //fAnimateWidth (colRight3, colRightWidth3);
       //colRightCrop3.css ({"width": colRightWidth3}); //colRightWidth3
       //fAnimateWidth (colRightCrop3Width, colRightWidth3);
-      //colRight3.css ({"border": "0px solid black"}); //for debugging
+      //colRight3.css ({"border": "0px solid black"}); //for debugging*/
 
       /**-----{ Percentage for height and width }-----**/
       var imgOrigWidth = 544; //Image original width
@@ -684,7 +691,7 @@
       console.log ("imgRowHeight3: ", imgRowHeight3);
 
       /** Setting the chamber total width **/
-      var totalImgsWidth = (colRightWidth3 * imgArry.length) + "100px";
+      var totalImgsWidth = ((colRightWidth3 * imgArry.length) + 100);//"100px";
       console.log ("totalImgsWidth: ", totalImgsWidth);
       elem.css ({"width": totalImgsWidth});
       //fAnimateHeight (id, ht + imgTitleHeight);
@@ -707,8 +714,8 @@
   };
 
   /**-----{ Create instances of the ImageSectionClass }-----**/
-  var ownImageSection = new ImageSectionClass (ownImagesChamberId, 50, aOwnImages);
-  var stax2ImageSection = new ImageSectionClass (stax2ImagesChamberId, 100, aStax2Images);
+  var ownImageSection   = new ImageSectionClass (ownImagesChamberId, aOwnImages);
+  var stax2ImageSection = new ImageSectionClass (stax2ImagesChamberId, aStax2Images);
   //ownImageSection.imgSectConfig (); //Put instances in fCommonFunctionalities to get invoke every time the window gets resize.
   console.log ("ownImageSection.Elem: ", ownImageSection.Elem);
   console.log ("ownImageSection.RightColPercntage: ", ownImageSection.RightColPercntage);
@@ -752,31 +759,29 @@
    *  to be added.
    ****************************************************************/
   function fCommonFunctionalities () {
-    /**-----{ Image title height and top position }-----**/
-    fTitlePlacement (imgTitle, imgTitleHeight, imgRowHeight);
+    /*/!**-----{ Image title height and top position }-----**!/
+     fTitlePlacement (imgTitle, imgTitleHeight, imgRowHeight);
 
-    /**----{ fImageHeightWidth: Setting array member's heights and widths }----**/
-    fImageHeightWidth (aHorizonImages, imgRowHeight, colRightWidth);
-    fImageHeightWidth (aStaxImages, imgRowHeight, colRightWidth);
-    //fImageHeightWidth (aOwnImages, imgRowHeight, colRightWidth);
+     /!**----{ fImageHeightWidth: Setting array member's heights and widths }----**!/
+     fImageHeightWidth (aHorizonImages, imgRowHeight, colRightWidth);
+     fImageHeightWidth (aStaxImages, imgRowHeight, colRightWidth);
+     //fImageHeightWidth (aOwnImages, imgRowHeight, colRightWidth);
 
-    /**----{ fImagesChamberWidthHeight: Setting images chamber width based on images array }----**/
-    fImagesChamberWidthHeight (horizonImagesChamberId, aHorizonImages, imgRowHeight);
-    fImagesChamberWidthHeight (staxImagesChamberId, aStaxImages, imgRowHeight);
-    //fImagesChamberWidthHeight (ownImagesChamberId, aOwnImages, imgRowHeight);
+     /!**----{ fImagesChamberWidthHeight: Setting images chamber width based on images array }----**!/
+     fImagesChamberWidthHeight (horizonImagesChamberId, aHorizonImages, imgRowHeight);
+     fImagesChamberWidthHeight (staxImagesChamberId, aStaxImages, imgRowHeight);
+     //fImagesChamberWidthHeight (ownImagesChamberId, aOwnImages, imgRowHeight);
 
-    /**-----{ fHeightWidthPercentage: Find the percentage based on image orig size }-----**/
-    fHeightWidthPercentage ();
+     /!**-----{ fHeightWidthPercentage: Find the percentage based on image orig size }-----**!/
+     fHeightWidthPercentage ();
 
-    /**-----{ fLogoContainer: Adjust the logo container's top position }-----**/
-    fLogoContainer ();
-
-    ownImageSection.imgSectConfig ();
-    stax2ImageSection.imgSectConfig ();
-
+     /!**-----{ fLogoContainer: Adjust the logo container's top position }-----**!/
+     fLogoContainer ();*/
+    ownImageSection.imgSectConfig (100);
+    stax2ImageSection.imgSectConfig (45);
   }
 
-  var mQ                = 0;
+  //var mQ                = 0;
   var horizonXpos;
   var horizonMultiplier = 0;
   var staxXpos;
@@ -784,29 +789,35 @@
   var ownXpos;
   var ownMultiplier     = 0;
   var stax2Xpos;
-  var stax2Multiplier    = 0;
+  var stax2Multiplier   = 0;
+
+  var ownColRight         = $ ("#ownColRight");
+  var ownColRightWidth3   = ownColRight.width ();
+  var stax2ColRight       = $ ("#stax2ColRight");
+  var stax2ColRightWidth3 = stax2ColRight.width ();
 
   /**-----------=====| Media Queries |=====-----------**/
   function fMediaQueries () {
-    mQ++;
+    //mQ++;
     //console.log ("fMediaQueries -------: ", mQ);
     /**-----===( When re-sizing window get the clicked amount mulitplied
      * by the current image width and used that number to re-position the container
      *********************************************************************)===-----**/
       //horizonMultiplier = 0;
       //horizonXpos = parseInt(colRightWidth * horizonMultiplier);
-    horizonXpos = colRightWidth * horizonMultiplier;
-    staxXpos    = colRightWidth * staxMultiplier;
-    ownXpos     = colRightWidth3 * ownMultiplier;
-    stax2Xpos    = colRightWidth3 * stax2Multiplier;
+
+      //horizonXpos = colRightWidth * horizonMultiplier;
+      //staxXpos    = colRightWidth * staxMultiplier;
+    ownXpos   = ownColRightWidth3 * ownMultiplier;
+    stax2Xpos = stax2ColRightWidth3 * stax2Multiplier;
 
     /** Keeps the image in place whenever the window gets resized **/
-    fXSlider (horizonImagesChamberId, -horizonXpos); //Used the css left instead of the x matrix
-    fXSlider (staxImagesChamberId, -staxXpos);
+      //fXSlider (horizonImagesChamberId, -horizonXpos); //Used the css left instead of the x matrix
+      //fXSlider (staxImagesChamberId, -staxXpos);
     fXSlider (ownImagesChamberId, -ownXpos);
     fXSlider (stax2ImagesChamberId, -stax2Xpos);
 
-    winWidth = $ (window).width (); //Browser window width
+    //winWidth = $ (window).width (); //Browser window width
     ////console.log ("winWidth: " + winWidth);
     windowInnerWidth = window.innerWidth;
 
@@ -925,7 +936,7 @@
   }
 
   /**-----{ Invoke function }-----**/
-  fPrevNextButtons ();
+  //fPrevNextButtons ();
 
   /**-----===( Initialize: Media Queries)===-----**/
   fInitMediaQueries ();

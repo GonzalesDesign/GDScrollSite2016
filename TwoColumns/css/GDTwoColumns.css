@@ -1,0 +1,221 @@
+/**********---=====( GDToColumns CSS Style Declaration )=====---**********/
+/*------=====| Hiding the scrolling bar |=====-----*/
+#gdPage {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+#gdContent {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: -15px; /* Decrease this value for cross-browser compatibility */
+  overflow: auto;
+}
+/*------=====| #sectionsPage: Adds shadow around the page |=====-----*/
+#sectionsPage {
+  -webkit-box-shadow: 0px 0px 12px 3px rgba(25, 25, 25, 0.10);
+  box-shadow: 0px 0px 20px 10px rgba(25, 25, 25, 0.10);
+}
+/*------=====| Rows: |=====-----*/
+.rowHeaderBar {
+  height: 50px;
+  /*background: url(../images/postersIntro/intro_00.jpg) no-repeat;*/
+  background-position: 0% 0%;
+  background-size: cover;
+  background-color: #0982a3;
+  border: 0px solid #4eff06;
+}
+
+.rowImages {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 0px solid #4eff06;
+}
+
+
+
+
+
+/**--- Stax2 Gallery ---**/
+#stax2ImagesChamberId {
+  /*old name: .ulRowImg1*/
+  float: left;
+  width: 1500px;
+  left: 0px;
+  position: relative;
+  /*margin-left: -15px;*/
+  /*height: 500px;*/
+  /*display: inline-block;*/
+  background-color: #31708f;
+  border: 0px solid #97996f;
+}
+
+#stax2Img1Id {
+  /*image width:
+  image height: */
+  /*float: left;
+  width: 200px;*/
+  background: url(../images/elnido.jpg) no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  border: 0px solid #e45a2e;
+}
+
+#stax2Img2Id {
+  background: url(../images/nycmotorshow.jpg) no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  border: 0px solid #f73aff;
+}
+
+#stax2Img3Id {
+  background: url(../images/birdcage.jpg) no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  border: 0px solid #f73aff;
+}
+
+#stax2Img4Id {
+  background: url(../images/nycmotorshow.jpg) no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  border: 0px solid #f73aff;
+}
+
+#stax2Img5Id {
+  background: url(../images/birdcage.jpg) no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  border: 0px solid #f73aff;
+}
+
+#stax2Img5Id {
+  background: url(../images/elnido.jpg) no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  border: 0px solid #f73aff;
+}
+
+#stax2Img6Id {
+  background: url(../images/nycmotorshow.jpg) no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  border: 0px solid #f73aff;
+}
+
+#stax2Img7Id {
+  background: url(../images/elnido.jpg) no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  border: 0px solid #f73aff;
+}
+
+#stax2Img8Id {
+  background: url(../images/birdcage.jpg) no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  border: 0px solid #f73aff;
+}
+
+#stax2Img9Id {
+  background: url(../images/nycmotorshow.jpg) no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  border: 0px solid #f73aff;
+}
+
+
+
+
+
+
+
+/*------=====| Rows: Columns |=====-----*/
+.ownColLeft {
+  padding-left: 0px;
+  height: 20px;
+  background-color: greenyellow;
+  border: 1px solid #d3e80b;
+}
+
+.ownColRight {
+  padding-left: 0px;
+  border: 0px solid #8b9606;
+}
+.ownColRightCrop {
+  width: 100px;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid #f82a11;
+}
+/**--- OwnPhones ---**/
+#ownImagesChamberId {
+  /*old name: .ulRowImg1*/
+  float: left;
+  width: 1500px;
+  left: 0px;
+  position: relative;
+  /*margin-left: -15px;*/
+  /*height: 500px;*/
+  /*display: inline-block;*/
+  opacity: 1;
+  background-color: #31708f;
+  border: 1px solid #97996f;
+}
+
+#ownImg1Id {
+  /*image width:
+  image height: */
+  /*float: left;
+  width: 200px;*/
+  background: url(../images/elnido.jpg) no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  border: 0px solid #e45a2e;
+}
+
+#ownImg2Id {
+  background: url(../images/nycmotorshow.jpg) no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  border: 0px solid #f73aff;
+}
+
+#ownImg3Id {
+  background: url(../images/birdcage.jpg) no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  border: 0px solid #f73aff;
+}
+
+#ownImg4Id {
+  background: url(../images/nycmotorshow.jpg) no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  border: 0px solid #f73aff;
+}
+
+#ownImg5Id {
+  background: url(../images/birdcage.jpg) no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  border: 0px solid #f73aff;
+}
+
+
+
+/*---=====( Section's bottom spacer )=====---*/
+.sectionSpacer {
+  height: 80px;
+  border: 0px solid #ff5011;
+}
+
+/* Temporary bottom spacer for dev testing */
+.temp {
+  height: 1000px;
+}
